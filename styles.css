@@ -1,0 +1,291 @@
+/* =========================================
+   Café Cordillera — estilos
+   ========================================= */
+
+:root {
+  --color-base:   #EFE8D8; /* pergamino cálido */
+  --color-ink:    #2B1B12; /* café tostado oscuro */
+  --color-olive:  #5C6B45; /* verde hoja de café */
+  --color-gold:   #B8862E; /* dorado tostado */
+  --color-brick:  #8B3A2B; /* cereza de café */
+  --color-card:   #F7F2E7; /* tarjeta clara */
+
+  --font-display: Georgia, 'Iowan Old Style', 'Palatino Linotype', serif;
+  --font-body: 'Segoe UI', Verdana, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--color-base);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+a { color: inherit; }
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  margin: 0 0 16px;
+  line-height: 1.15;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-olive);
+  margin: 0 0 10px;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  background: var(--color-ink);
+  color: var(--color-base);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--color-base);
+}
+
+.logo-icon {
+  width: 28px;
+  height: 28px;
+  color: var(--color-gold);
+}
+
+.main-nav {
+  display: flex;
+  gap: 28px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--color-base);
+  font-size: 0.95rem;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 3px;
+  transition: border-color 0.2s ease;
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible {
+  border-color: var(--color-gold);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  background: var(--color-ink);
+  color: var(--color-base);
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.hero-inner {
+  max-width: 680px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  color: #ffffff;
+}
+
+.hero-text {
+  font-size: 1.05rem;
+  color: #E4DBC8;
+  max-width: 52ch;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 12px 28px;
+  background: var(--color-gold);
+  color: var(--color-ink);
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 3px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  background: #cf9b39;
+  transform: translateY(-1px);
+}
+
+.steam-divider {
+  display: block;
+  width: 100%;
+  height: 40px;
+}
+
+/* ---------- Menú ---------- */
+.menu-section {
+  padding: 70px 0 80px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.menu-group {
+  background: var(--color-card);
+  border: 1px solid #ddd2b6;
+  border-radius: 6px;
+  padding: 28px 30px;
+}
+
+.menu-group h3 {
+  font-size: 1.15rem;
+  color: var(--color-brick);
+  border-bottom: 2px solid var(--color-brick);
+  padding-bottom: 8px;
+  margin-bottom: 18px;
+}
+
+.menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 9px 0;
+  border-bottom: 1px dashed #d8cba9;
+}
+
+.menu-list li:last-child {
+  border-bottom: none;
+}
+
+.item-name {
+  white-space: nowrap;
+}
+
+.dots {
+  flex: 1;
+  border-bottom: 1px dotted #a99b73;
+  transform: translateY(-4px);
+}
+
+.item-price {
+  font-weight: 700;
+  color: var(--color-olive);
+  white-space: nowrap;
+}
+
+/* ---------- Contacto ---------- */
+.contact-section {
+  background: var(--color-card);
+  padding: 70px 0 80px;
+  border-top: 1px solid #ddd2b6;
+}
+
+.contact-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.contact-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-list li {
+  padding: 8px 0;
+  border-bottom: 1px dashed #d8cba9;
+}
+
+.contact-list li:last-child {
+  border-bottom: none;
+}
+
+.map-placeholder {
+  background: repeating-linear-gradient(
+    45deg,
+    #e2d6b4,
+    #e2d6b4 10px,
+    #d8cba9 10px,
+    #d8cba9 20px
+  );
+  border-radius: 6px;
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-ink);
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: var(--color-ink);
+  color: #E4DBC8;
+  padding: 22px 0;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 720px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .main-nav {
+    gap: 18px;
+  }
+
+  .hero-inner {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  .menu-grid,
+  .contact-inner {
+    grid-template-columns: 1fr;
+  }
+}
