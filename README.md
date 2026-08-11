@@ -27,4 +27,4 @@ Página de una sola vista (landing page) con:
    local), lo que lo sirve en un puerto como `http://127.0.0.1:5500`.
 
 ## Autor
-Estudiante: _(agregar nombre)_
+Estudiante: Juan Osorio
